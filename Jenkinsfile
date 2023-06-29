@@ -16,13 +16,13 @@ return tasks
 }
 
 
-def runStages(String name, String profile) {
+def runStages(String name, String scripts, String profile) {
 	def tasks = [:]
 	tasks["task_1"] = {
 	  stage ("task_1"){    
 		node("${name}") {
 			dir("${env.custom_var"){				
-					sh "./profile_run.sh ${profile} P_SCRIPTS01.toString() profile"						
+					sh "./profile_run.sh ${profile} ${scripts} profile"						
 			}
 		}
 	  }
@@ -131,7 +131,7 @@ pipeline {
 						echo "Current workspace is ${workspace}"
 						echo "Current workspace "+workspace
 						env.custom_var=workspace
-						currtasks1 =  runStages("slave1", P_PROFILE.toString())
+						currtasks1 =  runStages("slave1", P_SCRIPTS01.toString(), P_PROFILE.toString())
 							stage('Testt') {
 								parallel currtasks1
 							}					
