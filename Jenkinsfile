@@ -34,7 +34,7 @@ def runStages(String name, String profile) {
 		node("${name}") {
 			dir("${env.custom_var}"){
 				if(P_SCRIPTS02.toString()!='NULL'){
-					sh "./profile_run.sh ${profile} \""+ P_SCRIPTS01.toString() +"\" profile"	
+					sh "./profile_run.sh ${profile} \""+ P_SCRIPTS02.toString() +"\" profile2"	
 				}
 			}
 		}
