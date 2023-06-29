@@ -21,7 +21,7 @@ def runStages(String name, String scripts, String profile) {
 	tasks["task_1"] = {
 	  stage ("task_1"){    
 		node("${name}") {
-			dir("${env.custom_var"){				
+			dir("${env.custom_var}"){				
 					sh "./profile_run.sh ${profile} ${scripts} profile"						
 			}
 		}
