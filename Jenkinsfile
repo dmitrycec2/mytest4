@@ -21,13 +21,25 @@ def runStages(String name, String profile) {
 	tasks["task_1"] = {
 	  stage ("task_1"){    
 		node("${name}") {
-			dir("${env.custom_var}"){				
-					sh "./profile_run.sh ${profile} "+ P_SCRIPTS01.toString() +" profile"						
+			dir("${env.custom_var}"){
+				if(P_SCRIPTS01.toString()!='NULL'){
+					sh "./profile_run.sh ${profile} "+ P_SCRIPTS01.toString() +" profile"	
+				}
 			}
 		}
 	  }
 	}
-	
+	tasks["task_2"] = {
+	  stage ("task_1"){    
+		node("${name}") {
+			dir("${env.custom_var}"){
+				if(P_SCRIPTS02.toString()!='NULL'){
+					sh "./profile_run.sh ${profile} "+ P_SCRIPTS01.toString() +" profile"	
+				}
+			}
+		}
+	  }
+	}	
 return tasks
 }
 
