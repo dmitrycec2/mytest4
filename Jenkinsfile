@@ -65,7 +65,7 @@ pipeline {
     choice(
       name: 'P_SCRIPTS01',
       description: '',
-      choices: ['UC01 UC02', 'UC01', 'NULL'] as List
+      choices: ['UC01 UC02 UC01 UC02 UC01 UC02 UC01 UC02 UC01 UC02 UC01 UC02 UC01 UC02', 'UC01', 'NULL'] as List
     )	
     choice(
       name: 'P_SCRIPTS02',
