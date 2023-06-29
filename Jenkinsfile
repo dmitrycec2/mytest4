@@ -70,7 +70,7 @@ pipeline {
     choice(
       name: 'P_SCRIPTS02',
       description: '',
-      choices: ['NULL', 'UC01 UC02', 'UC01'] as List
+      choices: ['NULL', 'UC03 UC04', 'UC01'] as List
     )		
   } // }
   agent none
