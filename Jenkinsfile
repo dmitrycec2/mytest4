@@ -138,26 +138,21 @@ pipeline {
                 }				
 				steps {						
 					script {
-						echo "Current workspace is ${env.WORKSPACE}"
+						//echo "Current workspace is ${env.WORKSPACE}"
 						def workspace = "${env.WORKSPACE}"
-						echo "Current workspace is ${workspace}"
+						//echo "Current workspace is ${workspace}"
 						echo "Current workspace "+workspace
 						env.custom_var=workspace
 						currtasks1 =  runStages("slave1", P_PROFILE.toString())
 							stage('Testt') {
 								parallel currtasks1
-							}					
+
+							}
+						
 					}	
 				}
 			}
 			
-			
-			
-		}	
-	}
-
-    stage('Tests') {
-		parallel {
 			stage('Test On slave2') {
 				when {
 					beforeAgent true;
@@ -167,23 +162,22 @@ pipeline {
 				}
 			    agent {
                    label 'slave2'
-                }				
-				steps {						
-					script {
+                }
+				steps {				
+					script {					
 						echo "Current workspace is ${env.WORKSPACE}"
 						def workspace = "${env.WORKSPACE}"
 						echo "Current workspace is ${workspace}"
 						echo "Current workspace "+workspace
 						env.custom_var=workspace
-						currtasks1 =  runStages("slave1", P_PROFILE.toString())
+						currtasks2 =  runStages("slave2", P_PROFILE.toString())
 							stage('Testt') {
-								parallel currtasks1
-							}					
-					}	
+								parallel currtasks2
+							}	
+					}
+				
 				}
 			}
-			
-			
 			
 		}	
 	}
