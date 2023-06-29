@@ -187,7 +187,7 @@
           </elementProp>
           <elementProp name="influx_host" elementType="Argument">
             <stringProp name="Argument.name">influx_host</stringProp>
-            <stringProp name="Argument.value">127.0.0.1</stringProp>
+            <stringProp name="Argument.value">192.168.1.166</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="influx_port" elementType="Argument">

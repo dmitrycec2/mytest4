@@ -43,7 +43,7 @@ pipeline {
     choice(
       name: 'P_PROFILE',
       description: '',
-      choices: ['profile_stab', 'profile_max', 'profile_confirm'] as List
+      choices: ['profile_max', 'profile_confirm'] as List
     )  
     choice(
       name: 'P_SLAVE1',
@@ -58,12 +58,12 @@ pipeline {
     choice(
       name: 'P_UC01',
       description: '',
-      choices: ['NULL', 'slave1', 'slave2'] as List
+      choices: ['slave1', 'slave2', 'NULL'] as List
     )	
     choice(
       name: 'P_UC02',
       description: '',
-      choices: ['slave1', 'NULL', 'slave2'] as List
+      choices: ['NULL', 'slave1', 'slave2'] as List
     )	
   } // }
   agent none
@@ -144,31 +144,6 @@ pipeline {
 				}
 			}
 			
-			stage('Test On slave2') {
-				when {
-					beforeAgent true;
-					expression {
-						return P_SLAVE2.toString()!='NULL';
-					}        
-				}
-			    agent {
-                   label 'slave2'
-                }
-				steps {				
-					script {					
-						echo "Current workspace is ${env.WORKSPACE}"
-						def workspace = "${env.WORKSPACE}"
-						echo "Current workspace is ${workspace}"
-						echo "Current workspace "+workspace
-						env.custom_var=workspace
-						currtasks2 =  prepareStages("slave2")
-							stage('Testt') {
-								parallel currtasks2
-							}	
-					}
-				
-				}
-			}
 			
 			
 		}	
