@@ -19,15 +19,13 @@ return tasks
 }
 
 
-def runStages(String name, String profile) {
+def runStages(String name, String scripts, String profile) {
 	def tasks = [:]
 	tasks["task_1"] = {
 	  stage ("task_1"){    
 		node("${name}") {
-			dir("${env.custom_var}/UI"){
-				if(P_UC01.toString()=="${name}"){
-					sh "./profile_run.sh ${profile} "UC01 UC02" profile"
-				}		
+			dir("${env.custom_var}/UI"){				
+					sh "./profile_run.sh ${profile} ${scripts} profile"						
 			}
 		}
 	  }
@@ -56,15 +54,15 @@ pipeline {
       choices: ['NULL', 'enable'] as List
     )
     choice(
-      name: 'P_UC01',
+      name: 'P_SCRIPTS01',
       description: '',
-      choices: ['slave1', 'slave2', 'NULL'] as List
+      choices: ['UC01 UC02', 'UC01', 'NULL'] as List
     )	
     choice(
-      name: 'P_UC02',
+      name: 'P_SCRIPTS02',
       description: '',
-      choices: ['NULL', 'slave1', 'slave2'] as List
-    )	
+      choices: ['NULL', 'UC01 UC02', 'UC01'] as List
+    )		
   } // }
   agent none
   options {
@@ -136,7 +134,7 @@ pipeline {
 						echo "Current workspace is ${workspace}"
 						echo "Current workspace "+workspace
 						env.custom_var=workspace
-						currtasks1 =  prepareStages("slave1")
+						currtasks1 =  runStages("slave1", P_SCRIPTS01.toString(), P_PROFILE.toString())
 							stage('Testt') {
 								parallel currtasks1
 							}					
