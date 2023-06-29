@@ -1,0 +1,35 @@
+          <elementProp name="UC02_testID" elementType="Argument">
+            <stringProp name="Argument.name">UC02_testID</stringProp>
+            <stringProp name="Argument.value">${__property(UC02_testID, UC02_testID, ${temp_testID})}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="UC02_targetConcurrency" elementType="Argument">
+            <stringProp name="Argument.name">UC02_targetConcurrency</stringProp>
+            <stringProp name="Argument.value">${__property(UC02_targetConcurrency, UC02_targetConcurrency, ${temp_targetConcurrency})}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="UC02_holdLoad" elementType="Argument">
+            <stringProp name="Argument.name">UC02_holdLoad</stringProp>
+            <stringProp name="Argument.value">${__property(UC02_holdLoad, UC02_holdLoad, ${temp_holdLoad})}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="UC02_stepTime" elementType="Argument">
+            <stringProp name="Argument.name">UC02_stepTime</stringProp>
+            <stringProp name="Argument.value">${__property(UC02_stepTime, UC02_stepTime, ${temp_stepTime})}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="UC02_rampUpTime" elementType="Argument">
+            <stringProp name="Argument.name">UC02_rampUpTime</stringProp>
+            <stringProp name="Argument.value">${__property(UC02_rampUpTime, UC02_rampUpTime, ${temp_rampUpTime})}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="UC02_stepSize" elementType="Argument">
+            <stringProp name="Argument.name">UC02_stepSize</stringProp>
+            <stringProp name="Argument.value">${__property(UC02_stepSize, UC02_stepSize, ${temp_stepSize})}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="UC02_pacingTargetThroughput" elementType="Argument">
+            <stringProp name="Argument.name">UC02_pacingTargetThroughput</stringProp>
+            <stringProp name="Argument.value">${__property(UC02_pacingTargetThroughput, UC02_pacingTargetThroughput, ${temp_pacingTargetThroughput})}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>

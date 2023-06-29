@@ -1,0 +1,85 @@
+2023-06-29 10:25:24,431 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-06-29 10:25:24,455 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2023-06-29 10:25:24,455 INFO o.a.j.JMeter: Version 5.4.1
+2023-06-29 10:25:24,455 INFO o.a.j.JMeter: java.version=1.8.0_271
+2023-06-29 10:25:24,455 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2023-06-29 10:25:24,455 INFO o.a.j.JMeter: os.name=Windows 10
+2023-06-29 10:25:24,455 INFO o.a.j.JMeter: os.arch=amd64
+2023-06-29 10:25:24,455 INFO o.a.j.JMeter: os.version=10.0
+2023-06-29 10:25:24,455 INFO o.a.j.JMeter: file.encoding=Cp1251
+2023-06-29 10:25:24,455 INFO o.a.j.JMeter: java.awt.headless=true
+2023-06-29 10:25:24,455 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-06-29 10:25:24,455 INFO o.a.j.JMeter: Available Processors =8
+2023-06-29 10:25:24,459 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-06-29 10:25:24,459 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-06-29 10:25:24,459 INFO o.a.j.JMeter: JMeterHome=C:\instr\apache-jmeter-5.4.1
+2023-06-29 10:25:24,459 INFO o.a.j.JMeter: user.dir  =D:\WORK\alrora\temp\jenkins\test_2_slaves_distributed\mytest4
+2023-06-29 10:25:24,459 INFO o.a.j.JMeter: PWD       =D:\WORK\alrora\temp\jenkins\test_2_slaves_distributed\mytest4
+2023-06-29 10:25:28,975 INFO o.a.j.JMeter: IP: 192.168.152.1 Name: DESKTOP-ND5MP1M FullName: DESKTOP-ND5MP1M
+2023-06-29 10:25:28,979 INFO o.a.j.s.FileServer: Default base='D:\WORK\alrora\temp\jenkins\test_2_slaves_distributed\mytest4'
+2023-06-29 10:25:28,979 INFO o.a.j.s.FileServer: Set new base='D:\WORK\alrora\temp\jenkins\test_2_slaves_distributed\mytest4\scripts'
+2023-06-29 10:25:29,094 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-06-29 10:25:29,113 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-06-29 10:25:29,117 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-06-29 10:25:29,133 INFO o.a.j.s.SaveService: Loading file: scripts\profile.jmx
+2023-06-29 10:25:29,188 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are END times
+2023-06-29 10:25:29,192 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2023-06-29 10:25:29,192 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-06-29 10:25:29,192 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-06-29 10:25:29,223 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-06-29 10:25:29,223 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-06-29 10:25:29,223 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-06-29 10:25:34,093 ERROR o.a.j.r.ClassFinder: Error filtering class com.google.common.collect.MapMakerInternalMap$WeakValueReferenceImpl, it will be ignored
+java.lang.IncompatibleClassChangeError: Implementing class
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[?:1.8.0_271]
+	at java.lang.ClassLoader.defineClass(Unknown Source) ~[?:1.8.0_271]
+	at java.security.SecureClassLoader.defineClass(Unknown Source) ~[?:1.8.0_271]
+	at java.net.URLClassLoader.defineClass(Unknown Source) ~[?:1.8.0_271]
+	at java.net.URLClassLoader.access$100(Unknown Source) ~[?:1.8.0_271]
+	at java.net.URLClassLoader$1.run(Unknown Source) ~[?:1.8.0_271]
+	at java.net.URLClassLoader$1.run(Unknown Source) ~[?:1.8.0_271]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_271]
+	at java.net.URLClassLoader.findClass(Unknown Source) ~[?:1.8.0_271]
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[?:1.8.0_271]
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[?:1.8.0_271]
+	at java.lang.Class.forName0(Native Method) ~[?:1.8.0_271]
+	at java.lang.Class.forName(Unknown Source) ~[?:1.8.0_271]
+	at org.apache.jorphan.reflect.ClassFinder$ExtendsClassFilter.isChildOf(ClassFinder.java:100) ~[jorphan.jar:5.4.1]
+	at org.apache.jorphan.reflect.ClassFinder$ExtendsClassFilter.accept(ClassFinder.java:86) ~[jorphan.jar:5.4.1]
+	at org.apache.jorphan.reflect.ClassFinder.applyFiltering(ClassFinder.java:404) ~[jorphan.jar:5.4.1]
+	at org.apache.jorphan.reflect.ClassFinder.lambda$findClassesInOnePath$2(ClassFinder.java:364) ~[jorphan.jar:5.4.1]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(Unknown Source) [?:1.8.0_271]
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source) [?:1.8.0_271]
+	at java.util.Iterator.forEachRemaining(Unknown Source) [?:1.8.0_271]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source) [?:1.8.0_271]
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source) [?:1.8.0_271]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source) [?:1.8.0_271]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(Unknown Source) [?:1.8.0_271]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(Unknown Source) [?:1.8.0_271]
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source) [?:1.8.0_271]
+	at java.util.stream.ReferencePipeline.forEach(Unknown Source) [?:1.8.0_271]
+	at org.apache.jorphan.reflect.ClassFinder.findClassesInOnePath(ClassFinder.java:362) [jorphan.jar:5.4.1]
+	at org.apache.jorphan.reflect.ClassFinder.findClasses(ClassFinder.java:326) [jorphan.jar:5.4.1]
+	at org.apache.jorphan.reflect.ClassFinder.findClassesThatExtend(ClassFinder.java:299) [jorphan.jar:5.4.1]
+	at org.apache.jorphan.reflect.ClassFinder.findClassesThatExtend(ClassFinder.java:231) [jorphan.jar:5.4.1]
+	at org.apache.jmeter.engine.util.CompoundVariable.<clinit>(CompoundVariable.java:72) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.engine.util.ValueReplacer.<init>(ValueReplacer.java:43) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.engine.PreCompiler.<init>(PreCompiler.java:54) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:362) [ApacheJMeter_core.jar:5.4.1]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_271]
+2023-06-29 10:25:34,450 INFO o.a.j.v.b.BackendListener: Backend Listener: Starting worker with class: class org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient and queue capacity: 5000
+2023-06-29 10:25:34,454 INFO o.a.j.v.b.BackendListener: Backend Listener: Started  worker with class: class org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient
+2023-06-29 10:25:35,177 INFO o.a.j.JMeter: Running test (1688023535177)
+2023-06-29 10:25:35,251 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 01
+2023-06-29 10:25:35,251 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group 01.
+2023-06-29 10:25:35,251 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-06-29 10:25:35,251 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2023-06-29 10:25:35,255 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-06-29 10:25:35,255 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : 02
+2023-06-29 10:25:35,255 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group 02.
+2023-06-29 10:25:35,255 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-06-29 10:25:35,255 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=1 delayedStart=false
+2023-06-29 10:25:35,259 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2023-06-29 10:25:35,259 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-06-29 10:25:35,259 INFO o.a.j.t.JMeterThread: Thread started: 01 1-1
+2023-06-29 10:25:35,259 INFO o.a.j.t.JMeterThread: Thread started: 02 2-1

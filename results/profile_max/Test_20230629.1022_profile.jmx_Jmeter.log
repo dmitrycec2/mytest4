@@ -1,0 +1,10 @@
+2023-06-29 10:22:50,669 ERROR o.a.j.JMeter: An error occurred: 
+java.lang.RuntimeException: Could not read JMeter properties file:D:\WORK\alrora\temp\jenkins\test_2_slaves_distributed\mytest4\profiles\profile_max\profile.properties
+	at org.apache.jmeter.util.JMeterUtils.loadJMeterProperties(JMeterUtils.java:200) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.JMeter.initializeProperties(JMeter.java:803) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.JMeter.start(JMeter.java:474) [ApacheJMeter_core.jar:5.4.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_271]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_271]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_271]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_271]
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:254) [ApacheJMeter.jar:5.4.1]

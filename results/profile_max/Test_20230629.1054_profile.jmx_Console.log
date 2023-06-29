@@ -1,0 +1,5 @@
+Created the tree successfully using scripts\profile.jmx
+Starting standalone test @ Thu Jun 29 10:54:37 MSK 2023 (1688025277134)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+Tidying up ...    @ Thu Jun 29 10:54:59 MSK 2023 (1688025299180)
+... end of run
