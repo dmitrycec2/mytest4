@@ -155,6 +155,39 @@ pipeline {
 			
 		}	
 	}
+
+    stage('Tests') {
+		parallel {
+			stage('Test On slave2') {
+				when {
+					beforeAgent true;
+					expression {
+						return P_SLAVE2.toString()!='NULL';
+					}        
+				}
+			    agent {
+                   label 'slave2'
+                }				
+				steps {						
+					script {
+						echo "Current workspace is ${env.WORKSPACE}"
+						def workspace = "${env.WORKSPACE}"
+						echo "Current workspace is ${workspace}"
+						echo "Current workspace "+workspace
+						env.custom_var=workspace
+						currtasks1 =  runStages("slave1", P_PROFILE.toString())
+							stage('Testt') {
+								parallel currtasks1
+							}					
+					}	
+				}
+			}
+			
+			
+			
+		}	
+	}
+
   }
  
 }
