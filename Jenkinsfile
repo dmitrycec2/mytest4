@@ -22,7 +22,7 @@ def runStages(String name, String profile) {
 	  stage ("task_1"){    
 		node("${name}") {
 			dir("${env.custom_var}"){				
-					sh "./profile_run.sh ${profile}"+ P_SCRIPTS01.toString() +"profile"						
+					sh "./profile_run.sh ${profile} "+ P_SCRIPTS01.toString() +" profile"						
 			}
 		}
 	  }
