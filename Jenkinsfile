@@ -99,6 +99,8 @@ pipeline {
 				echo "f=${f}"
 				sh 'chmod +x jmeter-start-test.sh'
 				sh 'chmod +x profile_run.sh'
+				sh 'chmod +x file_split.sh'
+				sh "./file_split.sh 2 1"
 			}		
 		}	
 	}
@@ -118,7 +120,9 @@ pipeline {
 				f = fileExists 'README.md'
 				echo "f=${f}"
 				sh 'chmod +x jmeter-start-test.sh'
-				sh 'chmod +x profile_run.sh'				
+				sh 'chmod +x profile_run.sh'
+				sh 'chmod +x file_split.sh'	
+				sh "./file_split.sh 2 2"
 			}		
 		}	
 	}
